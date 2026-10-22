@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#203c32">
+<meta name="description" content="Step into That Little Cafe on Todd Mall, Alice Springs. Seven Seeds coffee, matcha, toasties and a little moment to yourself beside Red Kangaroo Books.">
+<title>That Little Cafe · A little world on Todd Mall</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{--cream:#f4efe4;--paper:#fffaf1;--ink:#203c32;--sage:#bed09b;--clay:#b2533c;--line:#d7dbcd;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--max:1220px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.6}button,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit}img{max-width:100%;display:block}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--clay);outline-offset:5px}button:disabled{cursor:default}::selection{background:var(--sage);color:var(--ink)}
+.skip{position:fixed;left:16px;top:-100px;z-index:100;background:var(--cream);padding:12px}.skip:focus{top:12px}.wrap{width:min(var(--max),calc(100% - 64px));margin:auto}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.pill,.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;border:1px solid currentColor;border-radius:100px;text-decoration:none;padding:13px 24px;font-size:13px;font-weight:600;transition:background .2s,color .2s,transform .2s}.btn:hover{transform:translateY(-3px)}.btn.fill{background:var(--ink);border-color:var(--ink);color:var(--cream)}.btn.light{background:var(--cream);border-color:var(--cream);color:var(--ink)}.btn.outline{background:transparent;color:inherit}.arrow{display:inline-block;transition:transform .25s}.btn:hover .arrow{transform:translateX(4px)}
+.header{position:fixed;z-index:30;top:16px;left:24px;right:24px;background:rgba(244,239,228,.96);border:1px solid rgba(32,60,50,.15);border-radius:10px;backdrop-filter:blur(16px);box-shadow:0 6px 24px #0000000b}.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 24px}.brand{text-decoration:none;font-family:var(--serif);font-size:24px;line-height:1.1;letter-spacing:-1px}.brand em{font-weight:500}.navlinks{display:flex;align-items:center;gap:25px;font-size:12px;font-weight:600}.navlinks a{text-decoration:none}.navlinks a:hover{text-decoration:underline;text-underline-offset:5px}.nav .btn{padding:9px 18px;font-size:12px}.status{display:flex;align-items:center;gap:7px;font-size:11px}.status i{width:6px;height:6px;border-radius:50%;background:var(--clay)}.status.open i{background:#458252}
+.walk{position:relative;background:var(--ink);color:var(--cream)}.js .walk{height:540svh;min-height:2600px}.stage{height:100svh;min-height:660px;position:relative;overflow:hidden;isolation:isolate}.js .stage{position:sticky;top:0}.ambient{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;filter:blur(38px) saturate(.65);opacity:.22;z-index:-2;pointer-events:none}.stage:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#183429e8,transparent 90%),linear-gradient(0deg,#17362cd9,transparent 35%);pointer-events:none}.scene-frames{position:absolute;right:6vw;top:10svh;width:48vw;height:80svh;perspective:1100px}.scene{position:absolute;inset:0;display:grid;place-items:center;opacity:0;will-change:transform,opacity;pointer-events:none;transform-origin:50% 55%}.scene:first-child{opacity:1}.scene img{height:90%;width:90%;object-fit:contain;filter:drop-shadow(0 22px 40px #0005)}.scene:after{content:'';position:absolute;inset:4% 9%;border:1px solid #e6eac638;transform:rotate(3deg);z-index:-1}.chapter-copy{position:absolute;left:max(5vw,calc((100vw - 1280px)/2));top:29%;width:42%;height:47%;pointer-events:none}.chapter{position:absolute;inset:0;opacity:0;transform:translateY(20px);transition:opacity .35s,transform .45s}.chapter.active{opacity:1;transform:none}.chapter:first-child{opacity:1}.js .chapter:first-child:not(.active){opacity:0}.chapter h1,.chapter h2{font-family:var(--serif);font-weight:500;font-size:clamp(46px,5.7vw,86px);line-height:1.02;letter-spacing:-.055em;margin:24px 0}.chapter em{color:var(--sage);font-weight:500}.chapter p{max-width:335px;font-size:14px;color:#e5ebdc;line-height:1.8}.stage-cta{position:absolute;bottom:16%;left:max(5vw,calc((100vw - 1280px)/2));display:flex;gap:12px;align-items:center}.walk-tag{position:absolute;right:5%;top:17%;width:112px;height:112px;border-radius:50%;background:var(--cream);color:var(--ink);display:flex;flex-direction:column;justify-content:center;align-items:center;line-height:1.2;transform:rotate(10deg);box-shadow:0 8px 20px #0002}.walk-tag strong{font-family:var(--serif);font-size:26px}.walk-tag span{font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-top:5px}.walk-controls{position:absolute;bottom:28px;left:5%;right:5%;display:flex;align-items:center;justify-content:space-between;gap:24px}.scroll-hint{font-size:10px;letter-spacing:.17em;text-transform:uppercase;display:flex;align-items:center;gap:12px}.scroll-hint:before{content:'';width:1px;height:34px;background:linear-gradient(transparent,var(--sage));animation:hint 2s ease-in-out infinite}.chapters{display:flex;align-items:center;gap:8px}.chapter-button{position:relative;border:0;background:transparent;color:var(--cream);width:34px;height:36px;padding:8px 0;font-size:11px;opacity:.5}.chapter-button:after{content:'';position:absolute;bottom:1px;left:0;right:0;height:2px;background:currentColor;transform:scaleX(.35);transition:transform .3s}.chapter-button[aria-current="step"]{opacity:1}.chapter-button[aria-current="step"]:after{transform:scaleX(1)}.walk-progress{position:absolute;bottom:0;left:0;height:3px;background:var(--sage);width:0;pointer-events:none}.quiet-link{font-size:11px;text-underline-offset:5px}.page-scroll{position:fixed;top:0;left:0;height:3px;background:var(--clay);z-index:50;width:0}
+.ticker{padding:22px 24px;text-align:center;background:var(--sage);font-size:11px;letter-spacing:.14em;text-transform:uppercase}.ticker span{margin:0 20px}.section{padding:110px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:35px;margin-bottom:42px}.section h2,.visit h2{font-family:var(--serif);font-size:clamp(38px,5vw,66px);font-weight:500;line-height:1.07;letter-spacing:-.045em;margin:16px 0}.section-head p{max-width:340px;font-size:13px;color:#617067}.menu-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}.menu-photo{position:sticky;top:115px}.photo-button{display:block;width:100%;padding:0;border:0;background:transparent;position:relative;text-align:left;color:inherit}.photo-button img{width:100%;height:auto}.photo-caption{display:flex;justify-content:space-between;gap:15px;font-size:11px;padding:13px 0}.photo-caption span:last-child{font-weight:600}.menu-photo .photo-button{background:#e2ddce;padding:18px;transform:rotate(-2deg)}.menu-photo .photo-button img{max-height:560px;object-fit:contain}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.filter{border:1px solid var(--line);background:transparent;border-radius:100px;padding:8px 14px;color:var(--ink);font-size:11px}.filter[aria-pressed="true"]{color:var(--cream);background:var(--ink);border-color:var(--ink)}.menu-search{width:100%;padding:13px 0;border:0;border-bottom:1px solid #b5beae;background:transparent;border-radius:0;color:var(--ink);font-size:13px;margin-bottom:12px}.menu-count{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#657668;min-height:18px}.menu-list{margin-top:12px}.menu-item{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 40px;gap:14px;animation:appear .3s ease both}.menu-item[hidden]{display:none}.menu-item h3{font-family:var(--serif);font-size:24px;font-weight:500;margin:0 0 4px;line-height:1.2}.menu-item p{font-size:12px;color:#647365;margin:0}.save{width:36px;height:36px;border:1px solid #bec8b6;border-radius:50%;background:transparent;color:var(--ink);align-self:center;font-size:21px}.save[aria-pressed="true"]{background:var(--ink);color:var(--cream)}.small-note{font-size:11px;color:#647365;margin-top:22px}.saved-note{font-size:11px;color:var(--clay);min-height:20px}.no-results{padding:30px 0;font-size:14px}
+.ritual{background:#e3e9d8;padding:48px;margin-top:65px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;border-radius:2px}.ritual h3{font:500 36px/1.1 var(--serif);letter-spacing:-.04em;margin:12px 0}.ritual p{font-size:13px;max-width:350px}.ritual-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.ritual label{display:block;font-size:11px}.ritual select{width:100%;margin-top:7px;background:var(--cream);padding:12px 10px;color:var(--ink);border:1px solid #b9c6ac;border-radius:3px;font-size:12px}.ritual-fields .btn{grid-column:1/-1;justify-self:start;margin-top:8px}.ritual-result{font-size:13px!important;min-height:42px;margin-bottom:0}
+.story{background:var(--ink);color:var(--cream)}.story-layout{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:center}.story-text p{font-size:14px;line-height:1.9;color:#d6dfce;max-width:420px}.story-text h2 em{color:var(--sage)}.story-details{display:flex;gap:30px;border-top:1px solid #d5e2bf33;padding-top:24px;margin-top:30px}.story-details span{font-size:10px;letter-spacing:.08em;text-transform:uppercase}.story-details strong{display:block;font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:0;text-transform:none;margin-bottom:5px}.story .photo-button img{max-height:580px;object-fit:contain}.gallery-head{margin-bottom:30px}.gallery{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:start}.gallery .photo-button:nth-child(2){margin-top:65px}.gallery .photo-button:nth-child(3){margin-top:20px}.gallery img{transition:transform .4s}.gallery .photo-button:hover img{transform:translateY(-5px)}
+.visit{background:#dfe6d3;padding:90px 0}.visit-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}.visit p{font-size:14px}.visit-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.hours{border-top:1px solid #a9b59e}.hours-row{display:flex;justify-content:space-between;gap:20px;padding:17px 0;border-bottom:1px solid #b6c2ac;font-size:13px}.hours-row small{display:block;font-size:10px;opacity:.7}.local-time{font-size:11px;margin-top:18px}.visit .status{font-size:12px;margin-bottom:20px}.footer{padding:32px 0;font-size:11px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer .brand{font-size:22px}.footer-links{display:flex;gap:20px}.footer-note{font-size:10px;color:#6e7a6b;margin-top:15px}.to-top{text-decoration:none}
+dialog{border:0;background:var(--paper);color:var(--ink);max-width:min(94vw,1000px);max-height:94svh;padding:16px;overflow:auto}dialog::backdrop{background:#10251ee8;backdrop-filter:blur(8px)}.dialog-top{display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:12px;margin-bottom:12px}.close{background:transparent;border:1px solid #c0cbb5;border-radius:50%;width:36px;height:36px;color:var(--ink);font-size:21px}.lightbox-image{max-height:77svh;width:auto;max-width:100%;object-fit:contain;margin:auto}.reveal{opacity:1}.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.js .reveal.visible{opacity:1;transform:none}
+@keyframes hint{50%{transform:translateY(6px);opacity:.5}}@keyframes appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(min-width:1600px){.scene-frames{right:10vw;width:43vw}.chapter-copy,.stage-cta{left:10vw}}
+@media(max-width:900px){.navlinks{gap:16px}.nav .status{display:none}.menu-layout{gap:32px}.story-layout{gap:38px}.ritual{padding:30px;gap:30px}.chapter h1,.chapter h2{font-size:60px}.visit-layout{gap:35px}}
+@media(max-width:650px){html{scroll-padding-top:90px}.wrap{width:calc(100% - 36px)}.header{left:10px;right:10px;top:10px}.nav{padding:13px 16px}.brand{font-size:22px}.navlinks{gap:12px}.navlinks .desktop{display:none}.nav .btn{padding:8px 14px}.js .walk{height:490svh;min-height:2400px}.stage{min-height:650px}.scene-frames{top:8svh;right:0;width:100%;height:65svh;max-height:620px}.scene img{width:88%;height:94%;filter:drop-shadow(0 12px 25px #0006)}.scene:after{inset:4% 21%;transform:rotate(3deg)}.ambient{opacity:.19}.stage:after{background:linear-gradient(0deg,#17382f 5%,#17382fe8 22%,transparent 63%)}.chapter-copy{left:24px;right:24px;top:auto;bottom:110px;width:auto;height:190px}.chapter .eyebrow{font-size:9px}.chapter h1,.chapter h2{font-size:clamp(43px,11.6vw,57px);margin:12px 0;max-width:370px}.chapter p{font-size:11px;line-height:1.6;max-width:300px;margin:9px 0}.stage-cta{left:24px;bottom:65px}.stage-cta .btn{padding:9px 18px;font-size:11px}.stage-cta .quiet-link{display:none}.walk-tag{width:76px;height:76px;top:14%;right:7%}.walk-tag strong{font-size:21px}.walk-tag span{font-size:7px}.walk-controls{bottom:16px;left:24px;right:24px;gap:10px}.scroll-hint{font-size:8px;letter-spacing:.1em;gap:8px}.scroll-hint:before{height:22px}.chapter-button{width:27px;height:28px;font-size:9px}.chapters{gap:5px}.ticker{padding:18px 14px;font-size:8px;line-height:2}.ticker span{margin:0 7px}.section{padding:70px 0}.section-head{display:block;margin-bottom:28px}.section-head p{max-width:100%}.section h2,.visit h2{font-size:44px}.menu-layout,.story-layout,.visit-layout,.ritual{grid-template-columns:1fr}.menu-photo{position:static;max-width:310px;margin:0 auto 12px}.menu-photo .photo-button img{max-height:350px}.menu-layout{gap:24px}.menu-item h3{font-size:23px}.toolbar{gap:6px}.filter{font-size:10px;padding:8px 12px}.ritual{gap:16px;padding:26px;margin-top:45px}.ritual h3{font-size:33px}.ritual-fields{gap:10px}.story-layout{gap:35px}.story .photo-button{max-width:330px;margin:auto}.story .photo-button img{max-height:440px}.story-details{gap:22px}.story-details strong{font-size:20px}.gallery{gap:12px}.gallery .photo-caption{font-size:9px;line-height:1.4;display:block}.gallery .photo-caption span{display:block;margin-top:5px}.gallery .photo-button:nth-child(2){margin-top:32px}.visit{padding:65px 0}.visit-layout{gap:40px}.footer-inner{align-items:start;flex-wrap:wrap}.footer-links{gap:15px;font-size:10px}.footer-note{font-size:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}.scene{will-change:auto}.chapter{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#menu">Skip to the menu</a>
+<div class="page-scroll" id="pageProgress" aria-hidden="true"></div>
+<header class="header"><nav class="nav" aria-label="Main navigation">
+<a class="brand" href="#home">that little <em>cafe.</em></a>
+<div class="navlinks"><span class="status" data-status><i></i><span>Weekdays · 7am–2pm</span></span><a class="desktop" href="#menu">The menu</a><a class="desktop" href="#story">Our little corner</a><a class="btn fill" href="#visit">Find us <span aria-hidden="true">↗</span></a></div>
+</nav></header>
+<main>
+<section class="walk" id="home" aria-label="A photographic walkthrough of That Little Cafe">
+<div class="stage">
+<img class="ambient" id="ambient" src="cafe-entrance.jpg" alt="" aria-hidden="true">
+<div class="scene-frames" aria-hidden="true">
+<div class="scene"><img src="cafe-entrance.jpg" alt="" fetchpriority="high" decoding="async"></div>
+<div class="scene"><img src="cafe-counter.jpg" alt="" decoding="async"></div>
+<div class="scene"><img src="arcade-plants.jpg" alt="" decoding="async"></div>
+<div class="scene"><img src="bookshop.jpg" alt="" decoding="async"></div>
+<div class="scene"><img src="cafe-menu.jpg" alt="" decoding="async"></div>
+</div>
+<div class="chapter-copy">
+<div class="chapter active"><span class="eyebrow">01 / Welcome to our little corner</span><h1>Small window.<br><em>Whole little world.</em></h1><p>A coffee stop, a leafy arcade, a bookshop next door. Come a little closer.</p></div>
+<div class="chapter" aria-hidden="true"><span class="eyebrow">02 / Up to the window</span><h2>A little cup.<br><em>A lovely start.</em></h2><p>Seven Seeds coffee, something from the cabinet, and your morning off to a good start.</p></div>
+<div class="chapter" aria-hidden="true"><span class="eyebrow">03 / Take your time</span><h2>A slower kind<br><em>of coffee break.</em></h2><p>Step out of the rush and into our leafy little pocket of Todd Mall.</p></div>
+<div class="chapter" aria-hidden="true"><span class="eyebrow">04 / Right next door</span><h2>One more chapter.<br><em>One more sip.</em></h2><p>Find us beside Red Kangaroo Books. A good coffee and a good browse belong together.</p></div>
+<div class="chapter" aria-hidden="true"><span class="eyebrow">05 / Make it your little ritual</span><h2>What are<br><em>you having?</em></h2><p>Something iced, something comforting, or a little bite to go with your usual.</p></div>
+</div>
+<div class="walk-tag" aria-hidden="true"><strong>7—2</strong><span>Monday to Friday</span><span>Todd Mall, Alice</span></div>
+<div class="stage-cta"><a class="btn light" href="#menu">Find your little favourite <span class="arrow" aria-hidden="true">↗</span></a><a class="quiet-link" href="#visit">3/45 Todd Mall</a></div>
+<div class="walk-controls"><div class="scroll-hint">Scroll to wander inside</div><div class="chapters" role="group" aria-label="Walkthrough chapters">
+<button class="chapter-button" type="button" data-chapter="0" aria-label="Chapter 1: Entrance" aria-current="step">01</button><button class="chapter-button" type="button" data-chapter="1" aria-label="Chapter 2: Cafe window">02</button><button class="chapter-button" type="button" data-chapter="2" aria-label="Chapter 3: Leafy arcade">03</button><button class="chapter-button" type="button" data-chapter="3" aria-label="Chapter 4: Bookshop next door">04</button><button class="chapter-button" type="button" data-chapter="4" aria-label="Chapter 5: At the counter">05</button>
+</div></div><div class="walk-progress" id="walkProgress" aria-hidden="true"></div>
+</div></section>
+<div class="ticker">Coffee by Seven Seeds <span>✳</span> Beside Red Kangaroo Books <span>✳</span> A little pause on Todd Mall</div>
+<section class="section" id="menu"><div class="wrap">
+<div class="section-head reveal"><div><span class="eyebrow">The little favourites</span><h2>Follow your<br><em>coffee curiosity.</em></h2></div><p>Explore a few things from our window. See the counter menu for current prices and daily availability.</p></div>
+<div class="menu-layout">
+<div class="menu-photo reveal"><button class="photo-button" type="button" data-photo="cafe-menu.jpg" data-caption="The counter menu · That Little Cafe" aria-label="Enlarge the real counter menu"><img src="cafe-menu.jpg" alt="That Little Cafe counter with its handwritten drink specials and printed menus" loading="lazy"><span class="photo-caption"><span>Fresh from our little window.</span><span>Tap to look closer ↗</span></span></button></div>
+<div class="menu-content">
+<div class="toolbar" role="group" aria-label="Filter menu">
+<button class="filter" type="button" data-filter="all" aria-pressed="true">Everything</button>
+<button class="filter" type="button" data-filter="coffee" aria-pressed="false">Coffee</button>
+<button class="filter" type="button" data-filter="specials" aria-pressed="false">Special drinks</button>
+<button class="filter" type="button" data-filter="tea" aria-pressed="false">Tea & matcha</button>
+<button class="filter" type="button" data-filter="bites" aria-pressed="false">Little bites</button>
+</div>
+
+<label class="eyebrow" for="menuSearch">Find your favourite</label>
+<input class="menu-search" id="menuSearch" type="search" placeholder="Try matcha, chai, toasties…" autocomplete="off">
+<div class="menu-count" id="menuCount" aria-live="polite"></div>
+
+<div class="menu-list" id="menuList">
+<article class="menu-item" data-category="coffee">
+<div><h3>Seven Seeds coffee</h3><p>For your everyday little coffee ritual.</p></div>
+<button class="save" type="button" aria-pressed="false" aria-label="Save Seven Seeds coffee">♡</button>
+</article>
+
+<article class="menu-item" data-category="specials">
+<div><h3>Iced brown sugar latte</h3><p>A sweet little change from your usual.</p></div>
+<button class="save" type="button" aria-pressed="false" aria-label="Save Iced brown sugar latte">♡</button>
+</article>
+
+<article class="menu-item" data-category="specials">
+<div><h3>Iced white chocolate latte</h3><p>Coffee with a little white chocolate sweetness.</p></div>
+<button class="save" type="button" aria-pressed="false" aria-label="Save Iced white chocolate latte">♡</button>
+</article>
+
+<article class="menu-item" data-category="tea">
+<div><h3>Strawberry matcha</h3><p>An iced matcha moment, with a strawberry twist.</p></div>
+<button class="save" type="button" aria-pressed="false" aria-label="Save Strawberry matcha">♡</button>
+</article>
+
+<article class="menu-item" data-category="tea">
+<div><h3>Banana matcha</h3><p>A different little take on your matcha fix.</p></div>
+<button class="save" type="button" aria-pressed="false" aria-label="Save Banana matcha">♡</button>
+</article>
+
+<article class="menu-item" data-category="specials">
+<div><h3>Dirty vanilla milkshake</h3><p>Vanilla meets an espresso kick.</p></div>
+<button class="save" type="button" aria-pressed="false" aria-label="Save Dirty vanilla milkshake">♡</button>
+</article>
+
+<article class="menu-item" data-category="specials">
+<div><h3>Salted caramel milkshake</h3><p>A little sweet, a little salty.</p></div>
+<button class="save" type="button" aria-pressed="false" aria-label="Save Salted caramel milkshake">♡</button>
+</article>
+
+<article class="menu-item" data-category="tea">
+<div><h3>Monk's sticky chai</h3><p>For when your coffee break calls for chai.</p></div>
+<button class="save" type="button" aria-pressed="false" aria-label="Save Monk's sticky chai">♡</button>
+</article>
+
+<article class="menu-item" data-category="tea">
+<div><h3>A pot of tea</h3><p>Love Tea, and a little time to yourself.</p></div>
+<button class="save" type="button" aria-pressed="false" aria-label="Save A pot of tea">♡</button>
+</article>
+
+<article class="menu-item" data-category="bites">
+<div><h3>Toasties</h3><p>See the window menu for today's fillings.</p></div>
+<button class="save" type="button" aria-pressed="false" aria-label="Save Toasties">♡</button>
+</article>
+
+<article class="menu-item" data-category="bites">
+<div><h3>Turkish rolls</h3><p>A little something for your lunch break.</p></div>
+<button class="save" type="button" aria-pressed="false" aria-label="Save Turkish rolls">♡</button>
+</article>
+
+<article class="menu-item" data-category="bites">
+<div><h3>Cakes, slices & muffins</h3><p>Take a peek at what's in the cabinet.</p></div>
+<button class ="save" type="button" aria-pressed="false" aria-label="Save Cakes, slices and muffins">♡</button>
+</article>
+</div>
+
+<p class="no-results" id="noResults" hidden>No little favourites found. Try a different search.</p>
+<p class="saved-note" id="savedNote" aria-live="polite">Tap a heart to remember something for your visit.</p>
+<p class="small-note">Your favourites stay on this device. Ask at the window about ingredients, dietary options and availability.</p>
+</div>
+</div>
+
+<div class="ritual reveal">
+<div>
+<span class="eyebrow">A little indecisive?</span>
+<h3>Let's find your<br><em>next little ritual.</em></h3>
+<p>Two little choices. One suggestion from the menu.</p>
+</div>
+<div>
+<div class="ritual-fields">
+<label for="mood">I'm in the mood for
+<select id="mood">
+<option value="coffee">A coffee kick</option>
+<option value="matcha">A matcha moment</option>
+<option value="sweet">A sweet treat</option>
+<option value="comfort">Something comforting</option>
+</select>
+</label>
+<label for="temperature">Make it
+<select id="temperature">
+<option value="iced">Cool & refreshing</option>
+<option value="warm">Warm & cosy</option>
+</select>
+</label>
+<button class="btn fill" type="button" id="pickDrink">Find my little favourite ↗</button>
+</div>
+<p class="ritual-result" id="ritualResult" aria-live="polite">Your next favourite could be a little different.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section story" id="story">
+<div class="wrap story-layout">
+<div class="story-text reveal">
+<span class="eyebrow">Coffee, greenery & good company</span>
+<h2>Not far from<br><em>your next chapter.</em></h2>
+<p>We're that little window beside Red Kangaroo Books on Todd Mall. A place to pick up your usual, try something new, and enjoy a little pause in the middle of Alice.</p>
+<p>Come for a coffee. Stay for a browse. Let the rest of the day wait a little.</p>
+<div class="story-details">
+<span><strong>Seven Seeds</strong>In your coffee cup</span>
+<span><strong>Todd Mall</strong>In the heart of Alice</span>
+</div>
+</div>
+<button class="photo-button reveal" type="button" data-photo="bookshop.jpg" data-caption="Red Kangaroo Books · Our neighbour on Todd Mall" aria-label="Enlarge the bookshop photograph">
+<img src="bookshop.jpg" alt="The entrance to Red Kangaroo Books next door to That Little Cafe" loading="lazy">
+<span class="photo-caption"><span>Our next-door neighbour.</span><span>Look a little closer ↗</span></span>
+</button>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+<div class="gallery-head reveal">
+<span class="eyebrow">A little look around</span>
+<h2>Your kind of<br><em>little hideaway.</em></h2>
+</div>
+<div class="gallery">
+<button class="photo-button reveal" type="button" data-photo="cafe-entrance.jpg" data-caption="The arcade entrance" aria-label="Enlarge the arcade entrance photograph">
+<img src="cafe-entrance.jpg" alt="Leafy arcade entrance to the cafe and bookshop" loading="lazy">
+<span class="photo-caption"><span>Follow the greenery.</span><span>01 / The entrance ↗</span></span>
+</button>
+<button class="photo-button reveal" type="button" data-photo="arcade-plants.jpg" data-caption="A leafy corner beside the bookshop" aria-label="Enlarge the leafy arcade photograph">
+<img src="arcade-plants.jpg" alt="Potted leafy plants beside Red Kangaroo Books" loading="lazy">
+<span class="photo-caption"><span>A little room to breathe.</span><span>02 / The arcade ↗</span></span>
+</button>
+<button class="photo-button reveal" type="button" data-photo="cafe-counter.jpg" data-caption="That Little Cafe's serving window" aria-label="Enlarge the cafe window photograph">
+<img src="cafe-counter.jpg" alt="That Little Cafe's timber serving window with coffee and drink specials" loading="lazy">
+<span class="photo-caption"><span>See you at the window.</span><span>03 / The cafe ↗</span></span>
+</button>
+</div>
+</div>
+</section>
+
+<section class="visit" id="visit">
+<div class="wrap visit-layout">
+<div class="reveal">
+<span class="eyebrow">Find our little window</span>
+<h2>A little detour.<br><em>A very good idea.</em></h2>
+<p><strong>That Little Cafe</strong><br>3/45 Todd Mall, Alice Springs NT 0870<br>Beside Red Kangaroo Books.</p>
+<div class="visit-actions">
+<a class="btn fill" href="https://www.google.com/maps/search/?api=1&query=That%20Little%20Cafe%203%2F45%20Todd%20Mall%20Alice%20Springs" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+<a class="btn outline" href="tel:+61408562519">0408 562 519</a>
+</div>
+</div>
+<div class="reveal">
+<div class="status" data-status role="status"><i></i><span>Weekdays · 7am–2pm</span></div>
+<div class="hours">
+<div class="hours-row"><span>Monday—Friday</span><strong>7:00am—2:00pm</strong></div>
+<div class="hours-row"><span>Saturday & Sunday</span><strong>Closed</strong></div>
+</div>
+<div class="local-time" id="localTime">Times shown in Alice Springs local time.</div>
+<p class="small-note">Hours may vary on public holidays.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="wrap">
+<div class="footer-inner">
+<a class="brand" href="#home">that little <em>cafe.</em></a>
+<div class="footer-links">
+<a href="https://www.instagram.com/thatlittlecafeinthemall/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+<a href="#menu">The menu</a>
+<a class="to-top" href="#home">Back to the beginning ↑</a>
+</div>
+<span>© <span id="year">2026</span> That Little Cafe</span>
+</div>
+<p class="footer-note">Coffee on Todd Mall, Mparntwe / Alice Springs. Menu selections and hours are subject to change.</p>
+</div>
+</footer>
+
+<dialog id="lightbox" aria-labelledby="photoTitle">
+<div class="dialog-top">
+<span id="photoTitle">A little look around</span>
+<button class="close" type="button" id="closePhoto" aria-label="Close photograph">×</button>
+</div>
+<img class="lightbox-image" id="lightboxImage" alt="">
+</dialog>
+
+<noscript>
+<style>
+.chapter-button,.ritual,.toolbar,.menu-search,.menu-content>label,.save{display:none}
+.walk-controls{display:none}
+</style>
+</noscript>
+
+<script>
+(() => {
+'use strict';
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const clamp = n => Math.max(0,Math.min(1,n));
+const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const walk = $('.walk');
+const scenes = $$('.scene');
+const chapters = $$('.chapter');
+const chapterButtons = $$('.chapter-button');
+const photos = ['cafe-entrance.jpg','cafe-counter.jpg','arcade-plants.jpg','bookshop.jpg','cafe-menu.jpg'];
+let active = -1;
+let ticking = false;
+
+function paintScroll(){
+ ticking = false;
+ const rect = walk.getBoundingClientRect();
+ const travel = Math.max(1,walk.offsetHeight-window.innerHeight);
+ const progress = clamp(-rect.top/travel);
+ const position = progress*4;
+
+ scenes.forEach((scene,i) => {
+  const distance = position-i;
+  scene.style.opacity = motion.matches
+   ? (Math.round(position)===i?1:0)
+   : clamp(1-Math.abs(distance));
+  scene.style.transform = motion.matches ? 'none' :
+   `translate3d(${distance*-18}px,${distance*-24}px,0) rotateY(${distance*-7}deg) rotateZ(${distance*-1.5}deg) scale(${1+distance*.07})`;
+ });
+
+ const next = Math.round(position);
+ if(next!==active){
+  active = next;
+  chapters.forEach((chapter,i) => {
+   chapter.classList.toggle('active',i===active);
+   chapter.setAttribute('aria-hidden',String(i!==active));
+  });
+  chapterButtons.forEach((button,i) => {
+   if(i===active)button.setAttribute('aria-current','step');
+   else button.removeAttribute('aria-current');
+  });
+  $('#ambient').src = photos[active];
+ }
+
+ $('#walkProgress').style.width = `${progress*100}%`;
+ const total = document.documentElement.scrollHeight-window.innerHeight;
+ $('#pageProgress').style.width = `${total>0?clamp(window.scrollY/total)*100:0}%`;
+}
+
+function requestPaint(){
+ if(!ticking){
+  ticking = true;
+  requestAnimationFrame(paintScroll);
+ }
+}
+window.addEventListener('scroll',requestPaint,{passive:true});
+window.addEventListener('resize',requestPaint);
+motion.addEventListener('change',requestPaint);
+
+chapterButtons.forEach(button => button.addEventListener('click',() => {
+ const top = walk.getBoundingClientRect().top+window.scrollY;
+ const travel = Math.max(1,walk.offsetHeight-window.innerHeight);
+ window.scrollTo({
+  top:top+travel*Number(button.dataset.chapter)/4,
+  behavior:motion.matches?'instant':'smooth'
+ });
+}));
+paintScroll();
+
+if('IntersectionObserver' in window){
+ const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+   if(entry.isIntersecting){
+    entry.target.classList.add('visible');
+    observer.unobserve(entry.target);
+   }
+  });
+ },{threshold:.08});
+ $$('.reveal').forEach(el => observer.observe(el));
+}else{
+ $$('.reveal').forEach(el => el.classList.add('visible'));
+}
+
+const cards = $$('.menu-item');
+let filter = 'all';
+let saved = new Set();
+
+try{
+ const stored = JSON.parse(localStorage.getItem('tlc-favourites')||'[]');
+ if(Array.isArray(stored)){
+  saved = new Set(stored.filter(value => typeof value==='string'));
+ }
+}catch(error){}
+
+const itemName = card => card.querySelector('h3').textContent;
+
+function filterMenu(){
+ const term = $('#menuSearch').value.toLocaleLowerCase().trim();
+ let visible = 0;
+ cards.forEach(card => {
+  const show = (filter==='all'||card.dataset.category===filter) &&
+   card.querySelector('div').textContent.toLocaleLowerCase().includes(term);
+  card.hidden = !show;
+  if(show)visible++;
+ });
+ $('#menuCount').textContent = `${visible} little favourite${visible===1?'':'s'}`;
+ $('#noResults').hidden = visible!==0;
+}
+
+$$('.filter').forEach(button => button.addEventListener('click',() => {
+ filter = button.dataset.filter;
+ $$('.filter').forEach(item => {
+  item.setAttribute('aria-pressed',String(item===button));
+ });
+ filterMenu();
+}));
+$('#menuSearch').addEventListener('input',filterMenu);
+
+function paintSaved(){
+ cards.forEach(card => {
+  const button = card.querySelector('.save');
+  const isSaved = saved.has(itemName(card));
+  button.setAttribute('aria-pressed',String(isSaved));
+  button.textContent = isSaved?'♥':'♡';
+  button.setAttribute('aria-label',`${isSaved?'Unsave':'Save'} ${itemName(card)}`);
+ });
+ $('#savedNote').textContent = saved.size
+  ? `${saved.size} little favourite${saved.size===1?'':'s'} saved for your next visit.`
+  : 'Tap a heart to remember something for your visit.';
+}
+
+cards.forEach(card => card.querySelector('.save').addEventListener('click',() => {
+ const name = itemName(card);
+ if(saved.has(name))saved.delete(name);
+ else saved.add(name);
+ try{
+  localStorage.setItem('tlc-favourites',JSON.stringify([...saved]));
+ }catch(error){}
+ paintSaved();
+}));
+paintSaved();
+filterMenu();
+
+$('#pickDrink').addEventListener('click',() => {
+ const mood = $('#mood').value;
+ const cool = $('#temperature').value==='iced';
+ const choices = {
+  coffee:cool?'Iced brown sugar latte':'Seven Seeds coffee',
+  matcha:cool?'Strawberry matcha':"Monk's sticky chai",
+  sweet:cool?'Salted caramel milkshake':'Cakes, slices & muffins',
+  comfort:cool?'Iced white chocolate latte':'A pot of tea'
+ };
+ const note = mood==='matcha'&&!cool
+  ? 'Our matcha specials are iced. For a cosy alternative, try '
+  : 'Your little suggestion: ';
+ $('#ritualResult').textContent =
+  note+choices[mood]+'. Ask at the window for availability.';
+});
+
+function updateHours(){
+ const now = new Date();
+ const parts = new Intl.DateTimeFormat('en-AU',{
+  timeZone:'Australia/Darwin',
+  weekday:'short',
+  hour:'2-digit',
+  minute:'2-digit',
+  hourCycle:'h23'
+ }).formatToParts(now);
+ const get = type => parts.find(part => part.type===type)?.value;
+ const day = get('weekday');
+ const minutes = Number(get('hour'))*60+Number(get('minute'));
+ const weekday = !['Sat','Sun'].includes(day);
+ const isOpen = weekday&&minutes>=420&&minutes<840;
+ const message = isOpen
+  ? 'Open now · until 2pm'
+  : weekday&&minutes<420
+   ? 'Back at 7am today'
+   : ['Fri','Sat','Sun'].includes(day)
+    ? 'Back Monday at 7am'
+    : 'Back tomorrow at 7am';
+
+ $$('[data-status]').forEach(el => {
+  el.classList.toggle('open',isOpen);
+  el.querySelector('span').textContent = message;
+ });
+ $('#localTime').textContent = 'In Alice Springs: '+
+  new Intl.DateTimeFormat('en-AU',{
+   timeZone:'Australia/Darwin',
+   weekday:'long',
+   hour:'numeric',
+   minute:'2-digit'
+  }).format(now)+'.';
+
+ $('#year').textContent = new Intl.DateTimeFormat('en-AU',{
+  timeZone:'Australia/Darwin',
+  year:'numeric'
+ }).format(now);
+}
+updateHours();
+setInterval(updateHours,30000);
+
+const dialog = $('#lightbox');
+let lastPhotoButton;
+
+$$('[data-photo]').forEach(button => button.addEventListener('click',() => {
+ lastPhotoButton = button;
+ $('#lightboxImage').src = button.dataset.photo;
+ $('#lightboxImage').alt = button.dataset.caption;
+ $('#photoTitle').textContent = button.dataset.caption;
+
+ if(typeof dialog.showModal==='function'){
+  dialog.showModal();
+  document.body.style.overflow = 'hidden';
+  $('#closePhoto').focus();
+ }else{
+  window.open(button.dataset.photo,'_blank','noopener');
+ }
+}));
+
+$('#closePhoto').addEventListener('click',() => dialog.close());
+
+dialog.addEventListener('click',event => {
+ if(event.target===dialog){
+  const box = dialog.getBoundingClientRect();
+  if(
+   event.clientX<box.left||
+   event.clientX>box.right||
+   event.clientY<box.top||
+   event.clientY>box.bottom
+  ){
+   dialog.close();
+  }
+ }
+});
+
+dialog.addEventListener('close',() => {
+ document.body.style.overflow = '';
+ lastPhotoButton?.focus({preventScroll:true});
+});
+})();
+</script>
+</body>
+</html>
